@@ -1,0 +1,198 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://tileset.png" type="Texture" id=2]
+[ext_resource path="res://Player01.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Item.tscn" type="PackedScene" id=4]
+[ext_resource path="res://nextlevelchime.wav" type="AudioStream" id=5]
+[ext_resource path="res://children.wav" type="AudioStream" id=6]
+[ext_resource path="res://doodlefont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://horn.wav" type="AudioStream" id=9]
+
+[sub_resource type="Gradient" id=12]
+offsets = PoolRealArray( 0.0774194, 1 )
+colors = PoolColorArray( 0.984375, 0.649421, 0.126892, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=13]
+gradient = SubResource( 12 )
+width = 1024
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=6]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 1, 320, 320 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 9, 9 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 1026.54, 601.955 )
+b = Vector2( -8.7735, 602.431 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -10.1003, -3.19801 )
+b = Vector2( 1041.67, -3.19801 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 3.83148, 623.66 )
+b = Vector2( 4.69727, 3.6021 )
+
+[sub_resource type="SegmentShape2D" id=5]
+a = Vector2( 9.55963, -50.8999 )
+b = Vector2( 11.0118, 569.512 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 328.273, 1.16046 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 608.0
+margin_bottom = 1024.0
+rect_rotation = 270.0
+rect_pivot_offset = Vector2( 300, 304 )
+texture = SubResource( 13 )
+expand = true
+
+[node name="TileOffset" type="Node2D" parent="."]
+position = Vector2( -0.540405, 0.540283 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TileMap" type="TileMap" parent="TileOffset"]
+tile_set = SubResource( 6 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -851994, 2, 0, 393226, 1, 0, 393227, 2, 0, 393228, 2, 0, 589838, 0, 0, 589839, 1, 0, 589840, 1, 0, 589841, 2, 0, 589847, 0, 131072, 655382, -1073741824, 3, 655383, 0, 1, 655384, 0, 0, 655385, 0, 1, 720918, -1073741824, 0, 786435, 0, 131073, 786436, 0, 131073, 786451, 1, 0, 786452, 1, 0, 786453, 2, 0, 786454, -1073741824, 0, 851970, 0, 0, 851971, 0, 1, 851972, 0, 0, 851973, 0, 1, 851974, 0, 1, 851990, -1073741824, 0, 917522, 0, 1, 917523, 0, 1, 917524, 0, 1, 917525, 0, 1, 917526, 0, 589833, 983040, -1610612736, 0, 1048576, -1610612736, 0, 1114112, -1610612736, 0, 1114120, 0, 131073, 1114121, 0, 131072, 1114124, 0, 1, 1114125, 0, 1, 1114126, 0, 1, 1114127, 0, 1, 1179648, -1610612736, 2, 1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 1, 1179656, 0, 0, 1179657, 0, 0 )
+
+[node name="Player01" parent="." instance=ExtResource( 3 )]
+position = Vector2( 492.892, 532 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="collunten" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="colloben" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 3 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="colllinks" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -7.29764, -9.28789 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="collrechts" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 1008.89, 39.0774 )
+shape = SubResource( 5 )
+
+[node name="ItemArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 383.47, 503.319 )
+
+[node name="nextlevel" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 318.58
+margin_top = 137.907
+margin_right = 747.58
+margin_bottom = 244.907
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0.0862745, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Game over!"
+align = 1
+
+[node name="HUD" parent="." instance=ExtResource( 8 )]
+
+[node name="death zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death zone"]
+position = Vector2( 663.657, 590.945 )
+shape = SubResource( 14 )
+
+[node name="GameoverTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="fail" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+volume_db = 5.824
+
+[node name="TimeLimit" type="Timer" parent="."]
+[connection signal="game_over" from="." to="." method="_on_Main_game_over"]
+[connection signal="body_entered" from="ItemArea" to="." method="_on_ItemArea_body_entered"]
+[connection signal="finished" from="nextlevel" to="." method="_on_nextlevel_finished"]
+[connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
+[connection signal="body_entered" from="death zone" to="." method="_on_death_zone_body_entered"]
+[connection signal="timeout" from="GameoverTimer" to="." method="_on_GameoverTimer_timeout"]
+[connection signal="timeout" from="TimeLimit" to="." method="_on_TimeLimit_timeout"]
