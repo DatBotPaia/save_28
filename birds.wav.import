@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/birds.wav-5fdf1053e76aee7b590322871af16030.sample"
+
+[deps]
+
+source_file="res://birds.wav"
+source_md5="c2b748f5341355996e24b1c5157b457e"
+
+dest_files=[ "res://.import/birds.wav-5fdf1053e76aee7b590322871af16030.sample" ]
+dest_md5="daa7cf31ff515c75223dc2f02b0fae67"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

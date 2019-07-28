@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/children.wav-50689908e7b77382b5dbb53883bc28b5.sample"
+
+[deps]
+
+source_file="res://children.wav"
+source_md5="db8064b4825f608d7d5c23a1040ea075"
+
+dest_files=[ "res://.import/children.wav-50689908e7b77382b5dbb53883bc28b5.sample" ]
+dest_md5="17574d806339e763fa3560bdf9dd2e8d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

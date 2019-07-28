@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/groundl copy.png-4dd240e9ff367eb10d7f4e5a34fa4f17.stex"
+
+[deps]
+
+source_file="res://winter ground/groundl copy.png"
+source_md5="09b31f29ba64c0fc50ee43038477fc69"
+
+dest_files=[ "res://.import/groundl copy.png-4dd240e9ff367eb10d7f4e5a34fa4f17.stex" ]
+dest_md5="7d8d2f8367a784eb8c52680013c94cce"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

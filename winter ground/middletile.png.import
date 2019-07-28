@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/middletile.png-c20f1cb0580fc6830d4b2f3062ac0a67.stex"
+
+[deps]
+
+source_file="res://winter ground/middletile.png"
+source_md5="7c840ea480aa6ed6a4a7a3d526d171f0"
+
+dest_files=[ "res://.import/middletile.png-c20f1cb0580fc6830d4b2f3062ac0a67.stex" ]
+dest_md5="2fc16354c7eb12a82291a4d4623c5b80"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/nextlevelchime.wav-109e5739fd7fa61a589148ac6ad05cf6.sample"
+
+[deps]
+
+source_file="res://nextlevelchime.wav"
+source_md5="a15877e1d6b0bdea0a3563ee9ae5d843"
+
+dest_files=[ "res://.import/nextlevelchime.wav-109e5739fd7fa61a589148ac6ad05cf6.sample" ]
+dest_md5="2e27e9c4197bd906ea2c096f9bac3fa2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
