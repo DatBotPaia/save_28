@@ -1,6 +1,7 @@
 extends Node2D
 
 signal game_over
+signal steakmove
 onready var timescore = 30
 
 func _ready():
@@ -22,10 +23,12 @@ func _on_HUD_start_game():
 	$Player01.show()
 	$ItemArea.show()
 	$TimeLimit.start()
+	emit_signal("steakmove")
 	
-
-func _on_ItemArea_area_entered(area):
-	print("item")
+	
+#
+#func _on_ItemArea_area_entered(area):
+#	print("item")
 
 
 func _on_ItemArea_body_entered(body):
@@ -53,6 +56,8 @@ func _on_Main_game_over():
 	$background.stop()
 	$GameoverTimer.start()
 	$fail.play()
+	$enemysteaks/steakdown.stop()
+	$enemysteaks/steakup.stop()
 
 
 

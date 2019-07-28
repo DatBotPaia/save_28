@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://tileset.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://doodlefont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=8]
 [ext_resource path="res://horn.wav" type="AudioStream" id=9]
+[ext_resource path="res://enemysteakstween.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Gradient" id=12]
 offsets = PoolRealArray( 0.0774194, 1 )
@@ -149,7 +150,7 @@ position = Vector2( 1008.89, 39.0774 )
 shape = SubResource( 5 )
 
 [node name="ItemArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 383.47, 503.319 )
+position = Vector2( 962.445, 219.001 )
 
 [node name="nextlevel" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
@@ -189,6 +190,15 @@ stream = ExtResource( 9 )
 volume_db = 5.824
 
 [node name="TimeLimit" type="Timer" parent="."]
+
+[node name="enemysteaks" parent="." instance=ExtResource( 10 )]
+position = Vector2( 864.586, 250.717 )
+
+[node name="enemysteaks2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 342.474, 482.049 )
+
+[node name="enemysteaks3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 74.9567, 325.674 )
 [connection signal="game_over" from="." to="." method="_on_Main_game_over"]
 [connection signal="body_entered" from="ItemArea" to="." method="_on_ItemArea_body_entered"]
 [connection signal="finished" from="nextlevel" to="." method="_on_nextlevel_finished"]

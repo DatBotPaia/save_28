@@ -22,5 +22,6 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+self_modulate = Color( 0.0470588, 0.027451, 0.443137, 1 )
 frames = SubResource( 2 )
 playing = true
